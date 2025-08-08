@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CyberTrend</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="index.css" />
+		<link rel="icon" href="icon.svg" />
+	</head>
+	<body>
+		<header class="baslik">
+			<a href="#ust" class="site-basligi">CyberTrend</a>
+		</header>
+
+		<main class="ana-icerik">
+			<section id="haberler-bolumu" class="haberler-bolumu">
+				<h2>Son Haberler</h2>
+				<div class="arama-filtre-kapsayici">
+					<input
+						type="text"
+						id="aramaKutusu"
+						placeholder="Haberlerde ara..."
+						aria-label="Haber arama kutusu"
+					/>
+					<select id="kategoriFiltresi" aria-label="Kategori filtresi">
+						<option value="">Tüm Kategoriler</option>
+						<!-- kategoriler js ile eklenecek -->
+					</select>
+				</div>
+				<div id="haberlerKapsayici" class="haber-kartlari">
+					<!-- haber kartları buraya js ile yüklenecek -->
+					<div class="yukleyici-kapsayici">
+						<div class="yukleyici"></div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div id="haberDetayModal" class="modal">
+			<div class="modal-icerik">
+				<span class="kapatma-butonu">&times;</span>
+				<h2 id="modalBaslik"></h2>
+				<div class="haber-bilgisi">
+					<span id="modalTarih"><i class="fas fa-calendar-alt"></i> </span>
+					<span id="modalYazar"><i class="fas fa-user"></i> </span>
+					<span id="modalKategori"><i class="fas fa-tag"></i> </span>
+				</div>
+				<img
+					id="modalFotograf"
+					src=""
+					alt="Haber Görseli"
+					onerror="this.onerror=null;this.src='https://placehold.co/800x450/3a3a3a/e0e0e0?text=Görsel+Bulunamadı';"
+				/>
+				<div id="modalIcerik"></div>
+			</div>
+		</div>
+
+		<footer class="alt-bilgi">
+			<div class="sosyal-medya">
+				<a
+					href="https://github.com/erensogutlu"
+					aria-label="GitHub"
+					target="_blank"
+					><i class="fab fa-github"></i
+				></a>
+			</div>
+		</footer>
+
+		<script src="index.js"></script>
+	</body>
+</html>
